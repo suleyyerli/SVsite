@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+.food-grid,
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.food-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.food-item input[type="radio"] {
+  display: none;
+}
+
+.food-item label {
+  padding: 8px 15px;
+  background-color: #ff69b4;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.food-item label:hover {
+  background-color: #ff1493;
+}
+
+.food-item input[type="radio"]:checked + label {
+  background-color: greenyellow;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.food-grid img,
+.activity-grid img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.calendar {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Fleur simple */
+.flower {
+  position: relative;
+  width: 120px;
+  height: 200px;
+  margin: 50px auto;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: #ffd700;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.petals {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+}
+
+.petals::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #ff69b4;
+  border-radius: 50%;
+  left: 40px;
+}
+
+.petals::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #ff69b4;
+  border-radius: 50%;
+  left: -40px;
+}
+
+.stem {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 6px;
+  height: 100px;
+  background: #32cd32;
+  transform: translateX(-50%);
+}
+
+.leaf {
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  background: #32cd32;
+  border-radius: 10px 0;
+}
+
+.leaf-right {
+  top: 50px;
+  right: -25px;
+  transform: rotate(-30deg);
+}
+
+.leaf-left {
+  top: 70px;
+  left: -25px;
+  transform: rotate(30deg);
+}
+
+/* Ajout des pétales haut et bas */
+.petals {
+  position: relative;
+}
+
+.petals span {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #ff69b4;
+  border-radius: 50%;
+}
+
+.petals span:nth-child(1) {
+  top: -40px; /* Pétale haut */
+  left: 0;
+}
+
+.petals span:nth-child(2) {
+  top: 40px; /* Pétale bas */
+  left: 0;
+}
+
+.restart-btn {
+  margin-top: 30px;
+  background-color: #ff1493;
+  border: 2px solid #ff69b4;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+  background-color: white;
+  color: #ff1493;
+  transform: scale(1.05);
+}

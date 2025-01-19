@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ma Valentine 💗</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Page 1 -->
+      <div class="page" id="page1">
+        <h1>Veux-tu être ma valentine ? 💗</h1>
+        <img src="images/love-you.gif" alt="Chat mignon" />
+        <div class="buttons">
+          <button onclick="nextPage(2)">Oui</button>
+          <button onclick="nextPage(2)">Non je ne veux pas o(╥﹏╥)o</button>
+        </div>
+      </div>
+
+      <!-- Page 2 -->
+      <div class="page" id="page2" style="display: none">
+        <h1>Merci 💗</h1>
+        <img src="images/merci.gif" alt="Merci" />
+        <button onclick="nextPage(3)">Clique ici UWU</button>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="page" id="page3" style="display: none">
+        <h1>Es-tu libre le ... 💗</h1>
+        <div class="calendar">
+          <p>❤️ 14/02/2024 ❤️</p>
+        </div>
+        <button onclick="nextPage(4)">Valider</button>
+      </div>
+
+      <!-- Page 4 -->
+      <div class="page" id="page4" style="display: none">
+        <h1>Que voudrais-tu manger ? 💗</h1>
+        <div class="food-grid">
+          <div class="food-item">
+            <img src="images/pizza.png" alt="Pizza" />
+            <p>Pizza ? ❤️</p>
+            <input type="radio" name="food" id="pizza" value="pizza" />
+            <label for="pizza">Choisir</label>
+          </div>
+          <div class="food-item">
+            <img src="images/lassagne.png" alt="Lasagne" />
+            <p>Lasagne ? ❤️</p>
+            <input type="radio" name="food" id="lasagne" value="lasagne" />
+            <label for="lasagne">Choisir</label>
+          </div>
+          <div class="food-item">
+            <img src="images/Pate.png" alt="Pâtes" />
+            <p>Pâtes ? ❤️</p>
+            <input type="radio" name="food" id="pates" value="pates" />
+            <label for="pates">Choisir</label>
+          </div>
+        </div>
+        <button onclick="nextPage(5)">Suivant</button>
+      </div>
+
+      <!-- Page 5 -->
+      <div class="page" id="page5" style="display: none">
+        <h1>Quel dessert veux-tu prendre ? 💗</h1>
+        <h2>Flop j'ai pas d'inspi ...❤️ (－‸ლ)</h2>
+        <div class="food-grid"></div>
+        <button onclick="nextPage(6)">Suivant</button>
+      </div>
+
+      <!-- Page 6 -->
+      <div class="page" id="page6" style="display: none">
+        <h1>Les différentes activités !! 💗</h1>
+        <div class="activity-grid">
+          <img src="images/mug.png" alt="mug" />
+          <img src="images/lego.png" alt="lego" />
+          <img src="images/film.png" alt="Film" />
+        </div>
+        <button onclick="nextPage(7)">Suivant</button>
+      </div>
+
+      <!-- Page 7 -->
+      <div class="page" id="page7" style="display: none">
+        <h1>Kız arkadaşım olduğun için teşekkür ederim. 💗</h1>
+        <div class="flower">
+          <div class="center"></div>
+          <div class="petals">
+            <span></span>
+            <span></span>
+          </div>
+          <div class="stem">
+            <div class="leaf leaf-right"></div>
+            <div class="leaf leaf-left"></div>
+          </div>
+        </div>
+        <button onclick="nextPage(1)" class="restart-btn">
+          Recommencer ❤️
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function nextPage(pageNumber) {
+        document.querySelectorAll(".page").forEach((page) => {
+          page.style.display = "none";
+        });
+        document.getElementById("page" + pageNumber).style.display = "flex";
+      }
+    </script>
+  </body>
+</html>
